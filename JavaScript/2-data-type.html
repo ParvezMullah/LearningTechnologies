@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("***************** String *****************")
+        let myDescription = "I am \"Parvez\". I like \'Programming\'.";
+        console.log(myDescription);
+        console.log("*******************************************")
+
+        console.log("***************** Numeric *****************")
+        let myAge = 25;
+        console.log(myAge, typeof (myAge));
+
+        let myHeight = 5.8;
+        console.log(myHeight, typeof myHeight);
+        console.log("*******************************************")
+
+        console.log("***************** Boolean *****************")
+        let isMale = true;
+        let isFemale = false;
+        console.log(isMale, typeof isMale);
+        console.log(isFemale, typeof isFemale);
+
+        let isGenderMale = 1;
+        let isGenderFemale = 0;
+        console.log(isGenderMale, typeof isGenderMale);
+        console.log(isGenderFemale, typeof isGenderFemale);
+
+        console.log("isMale == isGenderMale -", isMale == isGenderMale) // true
+        console.log("isFemale == isGenderFemale -", isFemale == isGenderFemale) // true
+        console.log("isFemale === isGenderFemale -", isFemale === isGenderFemale) // false
+        console.log("isMale == isGenderFemale -", isMale == isGenderFemale) // false
+        console.log("********************************************")
+
+        console.log("***************** Undefined ****************")
+        // Undefine : Value is not set or unknown.
+        let isMarried;
+        console.log(isMarried); // Undefine
+        let marriedTo = undefined;
+        console.log(marriedTo); // undefined
+        console.log("********************************************")
+
+        console.log("***************** Null ****************")
+        // Undefine : Value is not set or unknown.
+        let favouriteCrypto = null;
+        console.log(favouriteCrypto); // null
+        console.log("********************************************")
+
+    </script>
+</body>
+
+</html>

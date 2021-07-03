@@ -1,0 +1,1 @@
+document.body.innerHTML = "It will be loaded after the html code. Alright!";
