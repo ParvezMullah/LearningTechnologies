@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        1. It is a design pattern which is known as Self executing anonymous function
+            and contains two parts.
+        2. first is an anonymous function with the lexical scope enclosed within the
+            grouping operator().this prevents accessing variable within the IIFE idiom 
+            as well as polluting the global scope.
+        3. Second part creates immediate invoked function (), through which the
+        Javascript will directly interpret the functions.
+        */
+        (function () {
+            var myName = "Parvez";
+            console.log("I have immediately called " + myName);
+        }())
+    </script>
+</body>
+
+</html>

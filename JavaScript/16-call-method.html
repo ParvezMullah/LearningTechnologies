@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        1. call method is the predefined javascript method.
+        2. with call an object can call a method belong to another object.
+        */
+
+        person1 = {
+            myName: "Parvez",
+            attributes: function (age, gender) {
+                return `${this.myName} ${age} ${gender}`
+            }
+        }
+
+        person2 = {
+            myName: "Atif"
+        }
+
+        console.log(person1.attributes(25, "Male"))
+        console.log(person1.attributes.call(person2, 15, "Male"))
+    </script>
+</body>
+
+</html>
