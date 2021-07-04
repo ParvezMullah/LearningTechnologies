@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Higher Order function is a function that takes a function as an argument or return another function.
+        */
+        const area = (radius) => { return Math.PI * radius * radius; }
+        const circumference = (radius) => { return 2 * Math.PI * radius; }
+        const diameter = (radius) => { return Math.PI * radius; }
+
+        const calculate = (arr, formula) => {
+            const calculation = [];
+            for (pos = 0; pos < arr.length; pos++) {
+                calculation.push(formula(arr[pos]));
+            }
+            return calculation;
+        }
+        arr = [3, 1, 2, 4];
+        console.log("Area : " + calculate(arr, area));
+        console.log("Circumference : " + calculate(arr, circumference));
+        console.log("Diameter : " + calculate(arr, diameter));
+
+        console.log()
+
+        console.log(arr.map(area));
+        console.log(arr.map(circumference));
+        console.log(arr.map(diameter))
+
+        console.log()
+
+        Array.prototype.calculate = function (formula) {
+            const calculation = [];
+            for (pos = 0; pos < this.length; pos++) {
+                calculation.push(formula(this[pos]));
+            }
+            return calculation;
+        }
+        console.log(arr.calculate(area));
+        console.log(arr.calculate(circumference));
+        console.log(arr.calculate(diameter))
+    </script>
+</body>
+
+</html>

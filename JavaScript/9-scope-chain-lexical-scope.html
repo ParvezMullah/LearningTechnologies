@@ -1,0 +1,12 @@
+<script>
+    var myName = "Parvez";
+    function OuterFunction() {
+        age = "24"
+        innerFunction()
+        function innerFunction() {
+            height = "5.7";
+            console.log(myName + age + height)
+        }
+    }
+    OuterFunction() // Parvez245.7
+</script>

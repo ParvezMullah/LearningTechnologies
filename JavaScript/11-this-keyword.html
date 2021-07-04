@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        this keyword refers to the object it belongs to.
+        1. in method this refers to the owner object.
+        2. alone this refers to a global object.
+        3. in a function it belongs to the global object.
+        4. in a function, in strict mode,  this is undefined.
+        5. in event, this refers to the element that received the event.
+        6. methods like call, apply can refer this to any object.s
+        */
+        var myName = "Global Name";
+        console.log(this.myName); // alone this refers to global object.
+
+        function getName() {
+            return this.myName; // in a function this refers the global object.
+        }
+        console.log(getName());
+
+        function getMyName() {
+            getNameHere = {
+                myName: "Owner Name",
+                methodFunction: function () {
+                    console.log(this);
+                    function normalFunction() {
+                        console.log("normalFunction "+this.myName); // in a function this refers to the global object
+                    }
+                    normalFunction()
+                    return "methodFunction " +this.myName; // in method, this refers to the owner of the object.
+                }
+            }
+            return getNameHere.methodFunction();
+        }
+        console.log(getMyName())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<script>
+    "use strict";
+    /*
+    use stict will throw an error for the following comment.
+    */
+    num = 1; //assigned without declaration
+    function someFunction(a, a, a) {
+        // duplicate function parameter names
+        let x = "3.14"
+        delete x // deleting an variable or object? wont be allowed instrict.
+        return num + a;
+    }
+    console.log(someFunction(10, 20, 30))
+</script>
