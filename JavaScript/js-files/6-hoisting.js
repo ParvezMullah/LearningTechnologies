@@ -14,12 +14,11 @@ anonymous function(function without name and assigned to a variable):
         It will not be hoisted at the top.
 */
 
-console.log("Before myExample: ", myExample())
+console.log("Before myExample: ", myExample("Parvez"))
 
 var myName = "Parry";
 function myExample(a) {
-    console.log(a);
-    console.log(myName);
+    return a;
 }
 
 
