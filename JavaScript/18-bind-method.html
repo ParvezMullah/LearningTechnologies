@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        1. by using bind method we can bind an object to a common function.
+            so that function gives different results when needed.
+        */
+
+        person1 = {
+            name: "Parvez",
+            age: "25"
+        }
+        person2 = {
+            name: "Atif",
+            age: "5"
+        }
+
+        function getAttributes() {
+            console.log(`${this.name} ${this.age}`);
+        }
+
+        let p1 = getAttributes.bind(person1);
+        p1()
+        let p2 = getAttributes.bind(person2);
+        p2()
+    </script>
+</body>
+
+</html>
