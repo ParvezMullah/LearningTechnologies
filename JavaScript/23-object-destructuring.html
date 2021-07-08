@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from
+        arrays, or properties from objects, into distinct variables.</h1>
+    <script>
+        const myProperties = {
+            name: "Parvez",
+            age: "25",
+            qualification: "MCA",
+            profession: "Software Engineer"
+        }
+        let { name, age, qualification } = myProperties;
+        console.log(`name is : ${name}, age is : ${age}, qualification is : ${qualification}`);
+
+        let { name: myName, age: myAge, qualification: myQualification } = myProperties;
+        console.log(`name is : ${myName}, age is : ${myAge}, qualification is : ${myQualification}`);
+
+        let myInfo = ["Parvez", 25]
+        let [myNameInfo, myAgeInfo] = myInfo
+        console.log(`name is : ${myNameInfo}, age is : ${myAgeInfo}`)
+
+        let myInfoLast = ["Parvez", 25, "hi", "blah", "blah", "blah"]
+        let [myNameInfoLast, myAgeInfoLast] = myInfoLast
+        console.log(`myNameInfoLast is : ${myNameInfoLast}, myAgeInfoLast is : ${myAgeInfoLast}`)
+
+    </script>
+</body>
+
+</html>
