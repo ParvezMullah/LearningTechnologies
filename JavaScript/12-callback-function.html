@@ -9,11 +9,13 @@
 </head>
 
 <body>
+    <h2>
+        <ol>
+            <ul>Any function that is passed as an argument is called as callback function.</ul>
+            <ul>A callback function is a function that is to be executed after another function is executed</ul>
+        </ol>
+    </h2>
     <script>
-        /*
-        1. Any function that is passed as an argument is called as callback function.
-        2. A callback function is a function that is to be executed after another function is executed
-        */
         const processOrder = (productName, cb) => {
             console.log(`${productName} is ordered successfully.`)
             cb()

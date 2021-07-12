@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class SendEmail {
+            sendEmailUtil() {
+                console.log("Sending Email")
+            }
+        }
+        class Student {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+            }
+            showName() {
+                console.log(this.name);
+            }
+        }
+        parvez = new Student("parvez", 25, "mullahparvez@gmail.com")
+        parvez.showName()
+
+        class Topper extends Student {
+
+        }
+        topper1 = new Topper()
+        topper1.showName()
+    </script>
+</body>
+
+</html>

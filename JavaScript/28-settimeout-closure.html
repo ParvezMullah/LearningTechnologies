@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=◊, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function setTimeoutWithVar() {
+            for (var i = 0; i < 5; i++) {
+                setTimeout(function () {
+                    console.log(i)
+                }, 1000);
+            }
+        }
+        setTimeoutWithVar() // 5 - 5 times
+
+        function setTimeoutWithLet() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(function () {
+                    console.log(i)
+                }, 1000);
+            }
+        }
+        setTimeoutWithLet() // 0,1,2,3,4
+
+        function setTimeoutWithClosure() {
+            for (var i = 0; i < 5; i++) {
+                function closureVar(i) {
+                    setTimeout(function () {
+                        console.log(i)
+                    }, 1000);
+                }
+                closureVar(i)
+            }
+        }
+        setTimeoutWithClosure() // 0,1,2,3,4
+    </script>
+</body>
+
+</html>

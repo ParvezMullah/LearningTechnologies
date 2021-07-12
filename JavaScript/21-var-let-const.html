@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>Temporal Zone : The phase from hoisting till the value is assigned incase of "let"</h2>
     <script>
         var myName = "Parvez";
         if (true) {
@@ -31,6 +32,9 @@
             console.log(myNameCons); // Airah
         }
         console.log(myNameCons); // Parvez
+
+        console.log(favFood); // can't access lexical declaration 'favFood' before initialization
+        let favFood = "Pizz";
     </script>
 </body>
 

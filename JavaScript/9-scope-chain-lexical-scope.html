@@ -1,12 +1,36 @@
-<script>
-    var myName = "Parvez";
-    function OuterFunction() {
-        age = "24"
-        innerFunction()
-        function innerFunction() {
-            height = "5.7";
-            console.log(myName + age + height)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lexical scope is the scope of local + parent scope</h1>
+    <script>
+        var myName = "Parvez";
+        function OuterFunction() {
+            age = "24"
+            innerFunction()
+            function innerFunction() {
+                height = "5.7";
+                console.log(myName + age + height)
+            }
         }
-    }
-    OuterFunction() // Parvez245.7
-</script>
+        OuterFunction() // Parvez245.7
+
+        function getDesignation() {
+            console.log(myDesignation)
+        }
+        function showDetails() {
+            let myDesignation = "Software Engineer"
+            getDesignation() // myDesignation is not defined exception
+        }
+        showDetails()
+    </script>
+</body>
+
+</html>

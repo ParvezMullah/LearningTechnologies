@@ -9,20 +9,36 @@
 </head>
 
 <body>
-    <script>
-        /*
-        1. Closure is the combination of function and lexical environment within which that function is declared.
-        2. Closure is an action in which inner function can access to outer variable and all the global variables.
+    <p>
+    <ol>
+        <h2>
+            <li>Closure is the combination of function and lexical environment within which that function is declared.
+            </li>
+            <li>Closure is an action in which inner function can access to outer variable and all the global variables.
+            </li>
+        </h2>
+    </ol>
 
-        Users : 
-            Module Design Pattern
-            Currying
-            Functions like once
-            memoize
-            maintaining state in async world
-            setTimeouts
-            iterators
-        */
+    <h2>Uses</h2>
+    <h2>
+        <ul>
+            <li>Module Design Pattern</li>
+            <li>Currying</li>
+            <li>Functions like once</li>
+            <li>memoize</li>
+            <li>maintaining state in async world</li>
+            <li>setTimeouts</li>
+            <li>iterators</li>
+        </ul>
+    </h2>
+    <h2>DisAdvantages</h2>
+    <h2>
+        <ol>
+            <li>Memory usage : every time closure is created it allocates memory</li>
+        </ol>
+    </h2>
+    </p>
+    <script>
         let myName = "Parvez";
         let outerFunction = () => {
             let age = "25";
@@ -36,7 +52,7 @@
             return innerFunction;
         }
         innerFunction = outerFunction();
-        console.log(innerFunction());
+        console.log(innerFunction()); //
     </script>
 </body>
 
