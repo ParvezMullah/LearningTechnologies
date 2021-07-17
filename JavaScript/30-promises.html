@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        The Promise object represents the eventual completion (or failure) of an asynchronous operation and its
+        resulting value <br><br>
+        Following are the states
+        <ol>
+            <li>pending: initial state, neither fulfilled nor rejected.</li>
+            <li>fulfilled: meaning that the operation was completed successfully.</li>
+            <li>rejected: meaning that the operation failed.</li>
+        </ol>
+    </h2>
+    <script>
+        const wordnikApi = "https://developer.wordnik.com/";
+        const giphyApi = "https://developers.giphy.com/";
+
+        let createP = (word) => {
+            console.log(word)
+        }
+        let createImage = (imgLink) => {
+            console.log(imgLink)
+        }
+        let setUp = () => {
+            fetch(wordnikApi)
+                .then(response => response.json())
+                .then(json => {
+                    createP(json.word);
+                    return fetch(giphyApi + json.word);
+                }
+                )
+                .then(response => response.json)
+                .then(json => {
+                    createImage(json.data[0].images['fixed_height_small'].url);
+                })
+                .catch(error => console.log(error))
+        }
+        // setUp();
+
+
+        // Custom promises
+
+        var promise = new Promise(function (resolve, reject) {
+            const x = "geeksforgeeks";
+            const y = "geeksforgeeks"
+            if (x === y) {
+                resolve();
+            } else {
+                reject();
+            }
+        });
+
+        promise.
+            then(function () {
+                console.log('Success, You are a GEEK');
+            }).
+            catch(function () {
+                console.log('Some error has occured');
+            });
+
+        let asyncSetUp = async function () {
+            const wordnikReponse = await fetch(wordnikApi)
+            const wordnikJson = await wordnikReponse.json()
+            const giphyReponse = await fetch(giphyApi)
+            const giphyJson = await giphyReponse.json()
+        }
+        asyncSetUp()
+    </script>
+</body>
+
+</html>
