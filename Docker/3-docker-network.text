@@ -1,0 +1,21 @@
+docker network ls 
+docker network create my-project-network
+
+
+docker run --name mysql-latest \
+-v /my/custom:/etc/mysql/conf.d \
+-p 3307:3306 --net my-project-network \
+-e MYSQL_ROOT_PASSWORD=123456 \
+-e MYSQL_DATABASE=mydb \
+-e MYSQL_USER=parry \
+-e MYSQL_PASSWORD=123456 \
+-d mysql:latest
+
+
+
+docker run --name myadmin \
+--link mysql-latest \
+-p 8080:80 --net my-project-network \
+-e PMA_HOST=my-project-network \
+-d phpmyadmin
+
