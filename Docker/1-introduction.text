@@ -1,0 +1,37 @@
+1. A way to package application with all the neccesary dependencies and configuration.
+2.Portable artifact, easily moved and shared.
+
+Dockerhub : Public reposatories.
+
+
+                Application Development
+
+    Before containerisation : Issues with existing way of Development
+1. installation process different in each OS environment.
+2. Many steps where something could go wrong.
+
+    After containerisation
+1. own isolated environment.
+2. packaged with all needed configuration.
+3. once docker command to install the app.
+4. run same app with two different versions.
+
+
+                Application Deployment
+
+    Before containerisation : Issues with existing way of Development
+1. configuration on the server is needed.
+2. dependency version conflicts
+3. textual guide of deployment
+4. missunderstanding
+
+
+    After containerisation
+1. Developers and operations work together to package the application in the container.
+2. No environment configuration needed on the server except docker run time.
+
+
+What is a container
+1. Layers of images
+2. Mostly linux based image, because small in size.
+3. Application image on the top

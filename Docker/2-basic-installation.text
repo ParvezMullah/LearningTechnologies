@@ -1,0 +1,40 @@
+https://www.youtube.com/watch?v=3c-iBn73dDE
+
+images      List images
+docker images
+
+pull        Pull an image or a repository from a registry
+docker pull django
+
+run         Run a command in a new container(pull + start)
+docker run --name container_name -p host_port/container_port -e MYSQL_ROOT_PASSWORD=12345 -d mysql:5.6
+
+ps          List containers)\
+docker ps
+
+
+stop        Stop one or more running containers
+docker stop image_id/name
+
+start       Start one or more stopped containers
+docker start image_id/name
+
+restart     Restart one or more containers
+docker restart image_id/name
+
+rm        Remove one or more containers
+dockere rm image_id/name
+
+rmi        Remove one or more images
+docker rmi image_id/name
+
+
+logs         Fetch the logs of a container
+docker logs image_id/name
+
+exec        Run a command in a running container
+docker exec -it 2befebf3811f /bin/bash
+
+
+network     docker network COMMAND
+docker network ls
