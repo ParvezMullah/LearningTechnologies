@@ -1,0 +1,11 @@
+1. Volume is simply a directory inside our container.
+2. first we have to declare its directory as a volume then we can share it.
+3. even if we stop container we can access the volume.
+4. volume will be created in one conainer.
+5. you can declare a directory as a volume only while creating a container.
+6. you cant create volume a volume from an existing container.
+7. you can share volume among any number of containers.
+8. volume will not be included when you update an image.
+9 you can map valume in two ways
+    container <=> container
+    host <=> container
