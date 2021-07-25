@@ -9,3 +9,10 @@
 9 you can map valume in two ways
     container <=> container
     host <=> container
+
+
+Benefits of volumes
+1. Decoupling volume from container.
+2. share volume among different containers.
+3. attach volume to container.
+4. on deleting container, volume does not delete.
