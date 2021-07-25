@@ -15,7 +15,5 @@ services:
             PMA_HOST: mysql-latest
             PMA_USER: root
             PMA_PASSWORD: 123456
-        links: 
-            - "mysql-latest"
         ports:
             - "8080:80"
