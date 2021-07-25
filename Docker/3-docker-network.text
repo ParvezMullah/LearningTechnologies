@@ -16,6 +16,8 @@ docker run --name mysql-latest \
 docker run --name myadmin \
 --link mysql-latest \
 -p 8080:80 --net my-project-network \
--e PMA_HOST=my-project-network \
+-e PMA_HOST=mysql-latest \
+-e PMA_USER=root \
+-e PMA_PASSWORD=123456 \
 -d phpmyadmin
 

@@ -1,0 +1,21 @@
+services: 
+    mysql-latest:
+        image: mysql:latest
+        restart: always
+        environment: 
+            MYSQL_DATABASE: mydb
+            MYSQL_ROOT_PASSWORD: 123456
+        ports: 
+            - "3307:3306"
+
+    phpmyadmin:
+        image: phpmyadmin:latest
+        restart: always
+        environment:
+            PMA_HOST: mysql-latest
+            PMA_USER: root
+            PMA_PASSWORD: 123456
+        links: 
+            - "mysql-latest"
+        ports:
+            - "8080:80"
