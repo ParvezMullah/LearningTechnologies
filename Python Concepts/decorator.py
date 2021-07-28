@@ -5,7 +5,7 @@ It accepts callable and returns a callable.
 def decorator2(func):
     def inner_func(*args, **kwargs):
         print("decorator2")
-        return func()
+        return func(*args, **kwargs)
     return inner_func
 
 
