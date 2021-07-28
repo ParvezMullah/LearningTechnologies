@@ -14,7 +14,7 @@ def decorator1(func):
         print("decorator1")
         print("args", args)
         print("kargs", kwargs)
-        return func(args, kwargs)
+        return func(*args, **kwargs)
 
     return inner_func
 
@@ -22,6 +22,7 @@ def decorator1(func):
 @decorator1
 def decorated_func(name, age):
     print("I am decorated.")
+    print(name, age)
 
 
 decorated_func(name="parvez", age="25")
