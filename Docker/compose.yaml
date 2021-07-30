@@ -1,5 +1,5 @@
 services: 
-    mysql-latest:
+    db:
         image: mysql:latest
         restart: always
         environment: 
@@ -12,8 +12,18 @@ services:
         image: phpmyadmin:latest
         restart: always
         environment:
-            PMA_HOST: mysql-latest
+            PMA_HOST: db
             PMA_USER: root
             PMA_PASSWORD: 123456
         ports:
             - "8080:80"
+
+    django-web:
+        build: .
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db

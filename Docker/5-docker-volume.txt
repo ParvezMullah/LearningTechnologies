@@ -16,3 +16,9 @@ Benefits of volumes
 2. share volume among different containers.
 3. attach volume to container.
 4. on deleting container, volume does not delete.
+
+
+docker volume --help 
+docker volume ls
+docker volume create code
+docker volume inspect
