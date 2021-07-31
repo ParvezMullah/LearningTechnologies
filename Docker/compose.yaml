@@ -17,10 +17,12 @@ services:
             PMA_PASSWORD: 123456
         ports:
             - "8080:80"
+        depends_on:
+            - db
 
     django-web:
         build: .
-        command: python manage.py runserver 0.0.0.0:8000
+        command: python django_sample/manage.py runserver 0.0.0.0:8000
         volumes:
             - .:/code
         ports:
