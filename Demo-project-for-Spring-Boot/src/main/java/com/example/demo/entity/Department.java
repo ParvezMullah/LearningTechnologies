@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +9,11 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
+@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@Builder
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,8 +23,6 @@ public class Department {
     public String departmentAddress;
     public String departmentCode;
 
-    public Department() {
-    }
 
     public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
         this.departmentId = departmentId;
