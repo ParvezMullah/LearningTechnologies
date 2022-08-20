@@ -63,6 +63,29 @@ Jenkins Tutorial:
     8. Distributed Build : Master-Slave configuration and setup.
     9. Backup jenkins
 
+
+Type of Jenkins projects:
+    1. Free style - simple single tasks - e.g run tests
+    2. Pipeline - whole delivery cycle - e.g test, build
+    3. Multibranch pipeline - Pipeline for multiple branches
+
+Jenkins Pipeline:
+    1. Scripted
+        1. first syntax
+        2. groovy engine
+        3. advanced scripting capabilities, high flexibility.
+        4. difficult to start
+    2. Declarative
+        1. recent addition
+        2. easier to get started, but not that powerful.
+        3. predefined structure.
+
+Required Fields of Jenkins file
+    1. pipeline: must be top level.
+    2. agent: where to execute.
+
+
+
 Run:
     cd Jenkins
      docker build -t myjenkins-blueocean:2.346.3-1 .
