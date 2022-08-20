@@ -1,0 +1,94 @@
+Continues Integration:
+    It is the major step in the Devops Lifecycle. It makes the Development, Testing and Deployment easier and faster.
+
+Continues Integration Tools:
+    Bamboo
+    Apache Gump
+    Jenkins
+    Buildbot
+    Travis CI
+
+Developer + Operation = DevOps
+
+Introduction To DevOps
+    It is an evolution from Agile model of software development.
+
+    DevOps Phases
+        1. Plan
+        2. Code
+        3. Build (Maven / Gradle)
+        4. Testing (Selenium)
+        5. Integration
+        6. Deploy
+        7. Operate (Configure server and provisioning them with the required resources)
+        8. Monitor (Monitoring allows IT organisation to identify specific issues specific releases and
+                    understand impact on end users.)
+
+    DevOps Advantages
+        1. Time taken to create and deliver software is reduced.
+        2. Complexity of maintaining application is reduced.
+        3. improved collaboration between Developers and Operations.
+        4. Continuous integration and Continuous Delivery ensure faster time to market.
+
+
+What is Jenkins
+    Jenkins is an continuous integration tool that allow continuous development, test and deployment of newly created codes.
+    It is an open source server written in java. It is use to automate software development process via continuous integration
+        and facilitates continuous delivery.
+
+Features of Jenkins:
+    Easy installation.
+    East configuration.
+    Plugins.
+    Extensible.
+    Distributed.
+
+Jenkins Pipeline:
+    Code Commit -> Build -> Test -> Release -> Deploy/Deliver
+
+Jenkins Architecture:
+    Build server builds the code into an executable file. Here, java file is being converted into JAR file.
+    In case the build fails, a feedback is sent to the developers.
+    Jenkins then deploy the build application on to the test server for testing. If the test fails,
+        feedback is immediate passed to the developers.
+
+Jenkins Tutorial:
+    1. Prerequisite and Installation
+    2. Jenkins typical configurations
+    3. create a new users and manage permissions.
+    4. Build lifestyle jobs and schedule its run.
+    5. Integrate github with jenkins
+    6. SMTP configuration for sending emails.
+    7. Deploy maven based application to the tomcat server.
+    8. Distributed Build : Master-Slave configuration and setup.
+    9. Backup jenkins
+
+Run:
+    cd Jenkins
+     docker build -t myjenkins-blueocean:2.346.3-1 .
+     docker run --name jenkins-blueocean --restart=on-failure --detach \
+       --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
+       --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
+       --publish 8080:8080 --publish 50000:50000 \
+       --volume jenkins-data:/var/jenkins_home \
+       --volume jenkins-docker-certs:/certs/client:ro \
+       myjenkins-blueocean:2.346.3-1
+
+     docker logs container_id
+
+     username: parvez
+     password: parvez
+
+
+Use Plugins:
+    1. authentication
+    2. maven project
+    3. deployment
+
+
+Jenkins Pipeline
+    It is a suite of jenkins features, installed as plugin, which enable implement and integrating continuous
+        delivery pipelines into jenkins.
+    It has steps(e.g JUnit, Deploy) in groovy.
+
+
