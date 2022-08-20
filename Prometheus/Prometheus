@@ -1,0 +1,96 @@
+What is Prometheus:
+    It is created to monitor highly dynamic container environment e.g Kubernetes, docker swarm etc.
+    Container and microservice architecture.
+    It also sends the alerts.
+
+Main Components:
+    1. Prometheus Server
+        Does the actual monitoring work.
+        It has made up of 3 parts
+        1. Storage - Time Series Database
+            Stores all the metrics data. e.g CPU usage, number of exceptions
+        2. Retrieval - Data Retrieval Worker
+            Pulls metrics data from Application, services and pushing them into the database.
+        3. HTTP Server - Accepts PromQL query
+           Accepts query to retrieve data
+           Use to view data on UI either prometheus ui or grafana.
+
+
+What does prometheus monitor / Targets:
+    1. Linux/Windows Server.
+    2. Apache server
+    3. application /service
+    4. Database
+
+Which units are monitored of those targets:
+    1. CPU status
+    2. Requests Count
+    3. Memory Disk / Space usage
+    4. Request Duration
+    5. Exception counts
+
+Metric
+    1. Format - human readable text based.
+    2. metrics entries
+        1. HELP - description of what the metric is
+        2. TYPE - 3 metrics type.
+            1. Counter -  how many times x happened.
+            2. Gauge - what is the current value of cpu/dis space/ concurrent use at a given time.
+            3. Histogram - how long or big. request is.
+
+
+How Does Prometheus collects those metrics from targets
+    1. pulls from HTTPS endpoints
+    2. Host address/metrics
+    3. must be in correct format
+
+                                                Target (Linux Server) /metrics
+    Data Retrieval Worker --- pulls over HTTP
+                                                External Services  / metrics
+
+
+Target Endpoints and exporters
+    1. exposing / metrics endpoints by default.
+    2. Many services needs another component. which is exporter.
+
+    Exporter
+        1. Fetches metrics from a service.
+        2. converts to correct format.
+        3. expose /metrics
+        4. Monitor linux server: Node exporter.
+        5. mysql
+        6. monitor own application: prometheus client libraries. using these metrics we can expose /metrics
+
+Push System of Other Monitoring System
+    1. Amazon Cloud watch
+    2. Application/Server push to centralized collection platform.
+    3. high load of network traffic.
+    4. monitoring can become bottleneck.
+    5. install additional tools to push the metrics
+
+
+Pull system advantages:
+    1. multiple prometheus instances can pull metrics data.
+    2. better detection/insight if services is up and running.
+
+Push gateway:
+    1. What, when target only run for a short time.
+
+
+Configure Prometheus:
+    1. How does prometheus know what to scrape and when?
+    2. view person-app.yml
+
+Alert Manager:
+    1. Prometheus Server ----> push to ---> Alert Manager ---- notify ---> Email/Slack/Etc
+
+
+Prometheus Data Storage:
+    1. where does prometheus store those data? SSD/HLD
+
+
+My Experience:
+    1. Learning PromQL
+    2. Configuring prometheus yml file.
+    3. Creating grafana dashboard.
+    
