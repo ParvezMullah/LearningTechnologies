@@ -1,0 +1,25 @@
+1. What is file system?
+Used to read and write from and to HD Ex NTFS, EXT, HDFS, S3 .
+
+2. What is block? Big file in to small chunk Ex NTFS 16 k, ext 512 k
+file are stored into block of particular size.
+
+3. Types of file system?
+    1. Standalone file system - NTFS, EXT
+        a file will be stored in a single machine.
+    2. Distributed file system - HDFS, S3, CFS
+        A file can be stored as chunk in multiple machines.
+
+4. Types of Distributed System?
+    1. Master and slave - Hadoop, Spark
+    2. Peer to peer - Cassandra
+
+5. what is process
+A program in execution.
+
+6. What is daemon process?
+Background process
+
+7. Clusture and Node
+Node - Standlone machine or VM
+clusture - group of node
