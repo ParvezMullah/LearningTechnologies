@@ -1,5 +1,5 @@
 1. What is file system?
-Used to read and write from and to HD Ex NTFS, EXT, HDFS, S3 .
+Used to read and write from and to HD Ex NTFS, EXT, HDFS, S3.
 
 2. What is block? Big file in to small chunk Ex NTFS 16 k, ext 512 k
 file are stored into block of particular size.
@@ -23,3 +23,4 @@ Background process
 7. Clusture and Node
 Node - Standlone machine or VM
 clusture - group of node
+
