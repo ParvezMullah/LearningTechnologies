@@ -1,0 +1,18 @@
+https://hub.docker.com/r/sequenceiq/hadoop-docker/
+
+HDFS Quota UseCase
+
+normal quota
+
+space quota
+
+hadoop dfsadmin -setSpaceQuota 100 /tech
+hadoop dfsadmin -clrSpaceQuota /tech
+
+hadoop fs -ls /tech
+
+
+setQuota
+
+hadoop dfsadmin -setQuota 3 /tech
+hadoop dfsadmin -clrQuota /tech

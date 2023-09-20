@@ -1,0 +1,52 @@
+What is big data:
+    pass
+
+Problems
+    1. Volume
+    2. value. quality
+    3. visualitation
+    4. velocity. speed of processing
+    5. variety. structure/unstructure
+
+Data Layers
+1. Storage 
+2. processing
+3. Testing
+4. visualitation
+5. DS, ML, AI 
+
+#Hadoop
+HDFS
+
+Map Reduce
+
+Hive
+    invented by fb. write sql which will be converted to java.
+
+Pig
+    invented by yahoo. piglatin language.
+
+scoop
+    command line.
+    import datasoure to HDFS
+    export from HDFS to datasoure
+
+oozie
+    scheduler
+
+Hbase(Hadoop base)
+    invented by fb. Its a query engine.
+
+Mahout
+    Datascience component. ML AI 
+
+Flume
+    Data pipeline. retrieve data in realtime.
+
+
+# Install Hadoop
+1. install java 8+
+2. install Hadoop
+
+
+https://gitee.com/liujingwen-git/docker-hadoop-spark
