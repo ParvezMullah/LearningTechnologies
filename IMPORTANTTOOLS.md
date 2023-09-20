@@ -8,3 +8,7 @@
 
 # Web Scraping
 - [Trafilatura](https://github.com/adbar/trafilatura)
+
+# Dashboarding
+- [Superset](https://superset.apache.org/)
+
