@@ -12,3 +12,5 @@
 # Dashboarding
 - [Superset](https://superset.apache.org/)
 
+# Job scheduling
+- [Airflow](https://airflow.apache.org/)
