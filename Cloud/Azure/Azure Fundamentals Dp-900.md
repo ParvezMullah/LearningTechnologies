@@ -153,4 +153,27 @@ enables multiple database services such as SQL Server, MySQL, PostgreSQL, MariaD
 
 # Microsoft Azure Data Fundamentals: Explore non-relational data in Azure
 
+## Explore Azure storage for non-relational data
+
+### Introduction
+### Explore Azure blob storage
+Store massive amount of binary large objects or blob.
+Azure supports three types of blobs:
+1. Block blobs
+    set of blocks. each can very upto 100MB. a block blob can be up to 50,000 blocks. it is best used to store discrete, large, binary objects that change infrequenctly. over 4.7TB.
+2. Page blobs
+    collection of 512-byte pages. optimised to support random read and write. page blob can holdupto 8TB.
+3. Append blobs
+    optimised for append operations. each block size upto 4MB. total is over 195GB.
+### Explore Azure Datalake Storage Gen2
+### Explore Azure Files
+### Explore Azure Tables
+### Excersise: Explore Azure storage for non-relational data
+
+## Explore fundamentals of Azure Cosmos DB
+### Introduction
+### Describe Azure Cosmos DB
+### Identify Azure Cosmos DB APIs
+### Excercise: Explore Azure Cosmos DB
+
 # Microsoft Azure Data Fundamentals: Explore data analysis in Azure
