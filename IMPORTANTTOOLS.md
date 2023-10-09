@@ -14,3 +14,6 @@
 
 # Job scheduling
 - [Airflow](https://airflow.apache.org/)
+
+# Password or snippet manager
+https://www.notion.so/
