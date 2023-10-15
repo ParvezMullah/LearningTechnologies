@@ -48,6 +48,9 @@
         7. Physical Layer
             1. consists largely hardware.
             2. responsible for the transmission and reception of the unstructured raw bit stream over a physical medium.
+    5. Tcp/ip 
+        1. The TCP/IP model is a condensed version of the OSI model.
+        2. Application, Transport, Network, Data link and physical layer.
 2. Internet and the OSI Model
 3. The application Layer
 4. The Transport Layer
