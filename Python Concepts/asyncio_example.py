@@ -3,6 +3,7 @@
 2. coroutine: feature which enables async programing in python. allows multiple tasks to run within same thread.
 3. task
 4. future
+5. synchronization: asyncio.lock
 """
 import asyncio
 from datetime import datetime
