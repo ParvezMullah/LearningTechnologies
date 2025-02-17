@@ -13,27 +13,30 @@ __sub__
 __add__
 __len__
 """
+
+
 class Person:
     def __init__(self, name):
         self.name = name
 
     def __repr__(self):
         return self.name
-    
+
     def __str__(self):
         return f"Name is : {self.name}"
-    
+
     def __mul__(self, p):
         return f"{self.name}*{p.name}"
-    
+
     def __sub__(self, p):
         return f"{self.name}-{p.name}"
-    
+
     def __call__(self):
         return self.name
-    
+
     def __len__(self):
         return len(self.name)
+
 
 person = Person("Parry")
 print(person)
