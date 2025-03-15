@@ -70,20 +70,47 @@ func main4() {
 3. pipelines
 */
 
-//for-select loop
+// for-select loop
 func main5() {
 	charChannel := make(chan string, 3)
 	chars := []string{"a", "b", "c"}
-	for _, s:= range chars{
+	for _, s := range chars {
 		charChannel <- s
 	}
 	close(charChannel)
-	for s := range charChannel{
+	for s := range charChannel {
 		fmt.Println(s)
 	}
 
 }
 
-func main(){
-	
+func main6() {
+	go func() {
+		for {
+			select {
+			default:
+				fmt.Println(("Doing Work!!!"))
+			}
+		}
+	}()
+	time.Sleep(time.Second * 10)
 }
+
+//done channel
+func doWork(done <-chan bool) {
+	for {
+		select {
+		case <-done:
+			return
+		default:
+			fmt.Println("Doing work!")
+		}
+	}
+}
+
+func main7(){
+	done:=make(chan bool)
+	go doWork(done)
+}
+
+//Pineline
