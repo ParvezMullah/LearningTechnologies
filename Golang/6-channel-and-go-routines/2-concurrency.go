@@ -96,7 +96,7 @@ func main6() {
 	time.Sleep(time.Second * 10)
 }
 
-//done channel
+// done channel
 func doWork(done <-chan bool) {
 	for {
 		select {
@@ -108,9 +108,46 @@ func doWork(done <-chan bool) {
 	}
 }
 
-func main7(){
-	done:=make(chan bool)
+func main7() {
+	done := make(chan bool)
 	go doWork(done)
+	time.Sleep(time.Second * 10)
+}
+
+func sliceToChannel(nums []int) <-chan int {
+	out := make(chan int)
+	go func() {
+		for _, n := range nums {
+			out <- n
+		}
+		close(out)
+	}()
+	return out
+}
+
+func sq(in <-chan int) <-chan int {
+	out := make(chan int)
+	go func() {
+		for n := range in {
+			out <- n * n
+		}
+		close(out)
+	}()
+	return out
 }
 
 //Pineline
+
+func main() {
+	//input
+	nums := []int{1, 2, 3, 4, 5}
+	//stage 1
+	dataChannel := sliceToChannel(nums)
+	//stage 2
+	finalChannel := sq(dataChannel)
+	//stage 3
+	for n := range finalChannel {
+		fmt.Println(n)
+	}
+
+}
